@@ -1,102 +1,48 @@
-# PYTHON ENVIRONMENTS & CACHE
+# ============= PYTHON =============
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
-*.so
-*.dll
-*.log
-*.tmp
-*.swp
-*.bak
-*.DS_Store
-*.egg-info/
 .venv/
 venv/
-env/
-ENV/
+*.egg-info/
+
+# ============= ENV / CREDENTIALS =============
+.env
+.env.*
+.streamlit/secrets.toml
+google_credentials.json
+
+# ============= IDE / SYSTEM =============
+.DS_Store
 .idea/
 .vscode/
 
-# DEPENDENCY & MODEL FILES
-# HuggingFace / Diffusers cache
-~/.cache/
-~/.huggingface/
-~/.diffusers/
+# ============= MODEL & CACHE =============
 .huggingface/
 .diffusers/
-hf_cache/
-model_cache/
 cache/
 checkpoints/
 *.ckpt
 *.safetensors
 *.bin
 
-# AI COMICS FACTORY OUTPUTS
+# ============= GENERATED OUTPUT =============
 outputs/
-# data/cache/
-# data/temp/
-# data/tmp/
-# data/samples/
 *.png
 *.jpg
 *.jpeg
-*.gif
 *.webp
 *.pdf
+storyboard.json
 
-# Ignore generated data, but keep original CSV dataset
-# =====================================================
-outputs/
-outputs/*
+# ============= DATA (processed) =============
 data/cache/
 data/temp/
 data/tmp/
-data/samples/
 
-# ⚙️ Keep CSV datasets in /data
+# Keep original datasets
 !data/*.csv
-!data/**/*.csv
 
-# Ignore CSVs outside /data (logs, temp)
-!data/TuThu_*.csv
-logs/
-*.zip
-*.json
-
-
-# Keep templates but not generated outputs
-!assets/fonts/
-!assets/config/
-
-# STREAMLIT / GOOGLE AI STUDIO
-.streamlit/
-.streamlit/secrets.toml
-google_credentials.json
-.env
-.env.*
-*.env
-
-# NOTEBOOKS / EXPERIMENTS
-*.ipynb_checkpoints/
-notebooks/.ipynb_checkpoints/
+# ============= TEMP / SCRATCH =============
 *.ipynb
-experiments/
 scratch/
-test_*.py
 draft_*.py
-
-# GENERATED MEDIA (AI OUTPUT)
-comic_page_*.png
-panel_*.png
-comic_story_*.pdf
-storyboard.json
-
-# MAC / SYSTEM FILES
-.DS_Store
-.AppleDouble
-.LSOverride
-Thumbs.db
-ehthumbs.db
-Icon?
