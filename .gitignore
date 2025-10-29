@@ -1,0 +1,102 @@
+# PYTHON ENVIRONMENTS & CACHE
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.dll
+*.log
+*.tmp
+*.swp
+*.bak
+*.DS_Store
+*.egg-info/
+.venv/
+venv/
+env/
+ENV/
+.idea/
+.vscode/
+
+# DEPENDENCY & MODEL FILES
+# HuggingFace / Diffusers cache
+~/.cache/
+~/.huggingface/
+~/.diffusers/
+.huggingface/
+.diffusers/
+hf_cache/
+model_cache/
+cache/
+checkpoints/
+*.ckpt
+*.safetensors
+*.bin
+
+# AI COMICS FACTORY OUTPUTS
+outputs/
+# data/cache/
+# data/temp/
+# data/tmp/
+# data/samples/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.pdf
+
+# Ignore generated data, but keep original CSV dataset
+# =====================================================
+outputs/
+outputs/*
+data/cache/
+data/temp/
+data/tmp/
+data/samples/
+
+# ⚙️ Keep CSV datasets in /data
+!data/*.csv
+!data/**/*.csv
+
+# Ignore CSVs outside /data (logs, temp)
+!data/TuThu_*.csv
+logs/
+*.zip
+*.json
+
+
+# Keep templates but not generated outputs
+!assets/fonts/
+!assets/config/
+
+# STREAMLIT / GOOGLE AI STUDIO
+.streamlit/
+.streamlit/secrets.toml
+google_credentials.json
+.env
+.env.*
+*.env
+
+# NOTEBOOKS / EXPERIMENTS
+*.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+*.ipynb
+experiments/
+scratch/
+test_*.py
+draft_*.py
+
+# GENERATED MEDIA (AI OUTPUT)
+comic_page_*.png
+panel_*.png
+comic_story_*.pdf
+storyboard.json
+
+# MAC / SYSTEM FILES
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Icon?
