@@ -1,3 +1,4 @@
+import base64
 import streamlit as st
 import os
 import json
@@ -31,7 +32,7 @@ with st.sidebar:
 
     st.divider()
 
-# --- CSS + caption tách riêng ---
+#  CUSTOM SIDEBAR FOOTER
 st.markdown(
     """
     <style>
@@ -50,8 +51,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-
 
 # MAIN INPUT
 quote = st.text_area(
@@ -157,13 +156,42 @@ if has_outputs:
     # TAB 1: A4 Pages
     with tab1:
         st.markdown("## 📖 A4 Layout Preview (Printable)")
-        a4_images = sorted([f for f in os.listdir(output_dir) if f.startswith("comic_page_A4_") and f.endswith(".png")])
+        pdf_path = os.path.join(output_dir, "comic_story_full.pdf")
 
-        if a4_images:
-            for img_file in a4_images:
-                st.image(os.path.join(output_dir, img_file), use_container_width=True)
+
+        if os.path.exists(pdf_path):
+            # Show embedded PDF viewer
+            st.success("✅ Premium A4 PDF generated successfully.")
+            st.markdown(
+                f"""
+                <iframe src="data:application/pdf;base64,{base64.b64encode(open(pdf_path, 'rb').read()).decode()}"
+                        width="100%" height="800px" type="application/pdf">
+                </iframe>
+                """,
+                unsafe_allow_html=True
+            )
+
+            # Download button
+            with open(pdf_path, "rb") as f:
+                st.download_button(
+                    label="📥 Download Full A4 PDF",
+                    data=f,
+                    file_name="comic_story_full.pdf",
+                    mime="application/pdf"
+                )
+
         else:
-            st.info("💡 No A4 pages found. Click 'Re-render Layout' to generate them.")
+            # Fallback to A4 preview images
+            a4_images = sorted([
+                f for f in os.listdir(output_dir)
+                if f.startswith("comic_page_A4_") and f.endswith(".png")
+            ])
+
+            if a4_images:
+                for img_file in a4_images:
+                    st.image(os.path.join(output_dir, img_file), use_container_width=True)
+            else:
+                st.info("💡 No A4 pages or PDF found. Click **'Re-render Layout'** to generate them.")
 
     # TAB 2: INDIVIDUAL PANELS (Save + ZIP)
     with tab2:
@@ -220,29 +248,14 @@ if has_outputs:
     with tab3:
         st.markdown("## 📋 Storyboard Data")
 
-        col_a, col_b = st.columns(2)
-        with col_a:
-            st.subheader("Full Storyboard")
-            json_path = os.path.join(output_dir, "storyboard.json")
-            if os.path.exists(json_path):
-                with open(json_path, "r", encoding="utf-8") as f:
-                    st.json(json.load(f))
-            else:
-                st.info("No storyboard.json found")
+        st.subheader("Full Storyboard")
+        json_path = os.path.join(output_dir, "storyboard.json")
 
-        with col_b:
-            st.subheader("Captions Only")
-            captions_path = os.path.join(output_dir, "storyboard_captions.json")
-            if os.path.exists(captions_path):
-                with open(captions_path, "r", encoding="utf-8") as f:
-                    captions_data = json.load(f)
-                    st.json(captions_data)
-
-                st.markdown("### 📝 Caption List")
-                for item in captions_data.get("captions", []):
-                    st.markdown(f"**Panel {item['panel']}**: {item['moral_link']}")
-            else:
-                st.info("No storyboard_captions.json found.")
+        if os.path.exists(json_path):
+            with open(json_path, "r", encoding="utf-8") as f:
+                st.json(json.load(f))
+        else:
+            st.info("No storyboard.json found")
 
     # TAB 4: DOWNLOADS
     with tab4:

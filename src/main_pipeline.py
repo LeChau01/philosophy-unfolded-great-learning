@@ -52,4 +52,4 @@ def run_pipeline(quote):
         render_story_page("outputs/storyboard.json", "outputs", output_pdf=True)  
 
 if __name__ == "__main__":
-    run_pipeline("Vật có gốc ngọn, việc có đầu, cuối. Biết chỗ trước, sau; thì gần được chân lý.")
+    run_pipeline("康誥曰：克明德。")

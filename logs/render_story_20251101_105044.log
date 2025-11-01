@@ -1,0 +1,45 @@
+2025-11-01 10:50:59 [INFO] render_story_page.py:41 - === Render Story Started ===
+2025-11-01 10:50:59 [INFO] render_story_page.py:42 - JSON Path: outputs/storyboard.json
+2025-11-01 10:50:59 [INFO] render_story_page.py:43 - Panels Dir: outputs
+2025-11-01 10:50:59 [INFO] render_story_page.py:55 - Loaded story 'The Magistrate's Root' with 8 panels metadata
+2025-11-01 10:50:59 [INFO] render_story_page.py:85 - Using font: /Users/chou/Library/Fonts/NotoSansSC[wght].ttf
+2025-11-01 10:50:59 [INFO] render_story_page.py:100 - Rendering 8 panels → 4 A4 pages
+2025-11-01 10:50:59 [INFO] render_story_page.py:172 - ✅ Rendered page 1/4
+2025-11-01 10:50:59 [INFO] render_story_page.py:172 - ✅ Rendered page 2/4
+2025-11-01 10:50:59 [INFO] render_story_page.py:172 - ✅ Rendered page 3/4
+2025-11-01 10:50:59 [INFO] render_story_page.py:172 - ✅ Rendered page 4/4
+2025-11-01 10:50:59 [INFO] render_story_page.py:184 - 🎉 Exported Premium PDF: outputs/comic_story_full.pdf
+2025-11-01 10:50:59 [INFO] render_story_page.py:185 - 🖼️ 4 pages | 8 panels total
+2025-11-01 10:50:59 [INFO] render_story_page.py:186 - 🈶 Font used: /Users/chou/Library/Fonts/NotoSansSC[wght].ttf
+2025-11-01 10:50:59 [INFO] render_story_page.py:191 - === Render Story Completed ===
+
+2025-11-01 10:56:43 [INFO] render_story_page.py:41 - === Render Story Started ===
+2025-11-01 10:56:43 [INFO] render_story_page.py:42 - JSON Path: outputs/storyboard.json
+2025-11-01 10:56:43 [INFO] render_story_page.py:43 - Panels Dir: outputs
+2025-11-01 10:56:43 [INFO] render_story_page.py:55 - Loaded story 'The Magistrate's Cup' with 7 panels metadata
+2025-11-01 10:56:43 [INFO] render_story_page.py:85 - Using font: /Users/chou/Library/Fonts/NotoSansSC[wght].ttf
+2025-11-01 10:56:43 [INFO] render_story_page.py:100 - Rendering 7 panels → 4 A4 pages
+2025-11-01 10:56:43 [INFO] render_story_page.py:172 - ✅ Rendered page 1/4
+2025-11-01 10:56:43 [INFO] render_story_page.py:172 - ✅ Rendered page 2/4
+2025-11-01 10:56:43 [INFO] render_story_page.py:172 - ✅ Rendered page 3/4
+2025-11-01 10:56:43 [INFO] render_story_page.py:172 - ✅ Rendered page 4/4
+2025-11-01 10:56:43 [INFO] render_story_page.py:184 - 🎉 Exported Premium PDF: outputs/comic_story_full.pdf
+2025-11-01 10:56:43 [INFO] render_story_page.py:185 - 🖼️ 4 pages | 7 panels total
+2025-11-01 10:56:43 [INFO] render_story_page.py:186 - 🈶 Font used: /Users/chou/Library/Fonts/NotoSansSC[wght].ttf
+2025-11-01 10:56:43 [INFO] render_story_page.py:191 - === Render Story Completed ===
+
+2025-11-01 10:56:43 [INFO] render_story_page.py:41 - === Render Story Started ===
+2025-11-01 10:56:43 [INFO] render_story_page.py:42 - JSON Path: outputs/storyboard.json
+2025-11-01 10:56:43 [INFO] render_story_page.py:43 - Panels Dir: outputs
+2025-11-01 10:56:43 [INFO] render_story_page.py:55 - Loaded story 'The Magistrate's Cup' with 7 panels metadata
+2025-11-01 10:56:43 [INFO] render_story_page.py:85 - Using font: /Users/chou/Library/Fonts/NotoSansSC[wght].ttf
+2025-11-01 10:56:43 [INFO] render_story_page.py:100 - Rendering 7 panels → 4 A4 pages
+2025-11-01 10:56:43 [INFO] render_story_page.py:172 - ✅ Rendered page 1/4
+2025-11-01 10:56:43 [INFO] render_story_page.py:172 - ✅ Rendered page 2/4
+2025-11-01 10:56:44 [INFO] render_story_page.py:172 - ✅ Rendered page 3/4
+2025-11-01 10:56:44 [INFO] render_story_page.py:172 - ✅ Rendered page 4/4
+2025-11-01 10:56:44 [INFO] render_story_page.py:184 - 🎉 Exported Premium PDF: outputs/comic_story_full.pdf
+2025-11-01 10:56:44 [INFO] render_story_page.py:185 - 🖼️ 4 pages | 7 panels total
+2025-11-01 10:56:44 [INFO] render_story_page.py:186 - 🈶 Font used: /Users/chou/Library/Fonts/NotoSansSC[wght].ttf
+2025-11-01 10:56:44 [INFO] render_story_page.py:191 - === Render Story Completed ===
+
