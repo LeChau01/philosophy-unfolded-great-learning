@@ -1,28 +1,36 @@
-## 🎓 Academic Context
+# Philosophy Unfolded - The Great Learning (大学 / Đại Học)
 
-This project was developed as part of the **Digital Humanities initiative** under the interdisciplinary research topic:
+## Overview
 
-> **“Philosophy in Graph: Digital Humanities Journeys through *The Four Books (Tứ Thư)*”**  
-> *Master of Interdisciplinary Science – VNUHCM University of Science, 2025*
+**Philosophy-Unfolded – The Great Learning** is a **Digital Humanities generative framework** that transforms the classical Confucian text *The Great Learning (大学 / Đại Học)* into illustrated moral narratives.  
+It bridges **philology, moral reasoning, and visual imagination** through a multimodal AI pipeline combining:
 
-### 🧭 Research Focus
-The project explores how *AI-driven narrative generation* and *multimodal visualization* can support philosophical interpretation and knowledge transmission.  
-It demonstrates how classical texts — such as *The Great Learning (Đại Học)*, *The Analects (Luận Ngữ)*, *Mencius (Mạnh Tử)*, and *Doctrine of the Mean (Trung Dung)* — can be computationally modeled and visually reimagined.
+- **Large Language Models** (Gemini 2.5) for narrative generation  
+- **Diffusion Models** (Stable Diffusion XL / FLUX.1) for ink-style illustration  
+- **Interactive Streamlit App** for real-time exploration and visualization  
 
-### 🧩 Methodological Approach
-- **Data Source:** Annotated bilingual corpus extracted from *Lý Minh Tuấn’s Tứ Thư Bình Giải*  
-- **Structure:** Each record includes Classical Chinese (C), Hán-Việt transliteration (V), and modern Vietnamese meaning (M)  
-- **Knowledge Representation:** A multilayer knowledge graph (16k nodes, 71k edges) connecting semantic, linguistic, and commentary relationships  
-- **Generative Extension:** Integration of Gemini + FLUX image synthesis to produce interpretive comic visualizations  
+This project extends the *Graphilosophy* initiative — originally focused on **knowledge-graph modeling of The Four Books** — into the generative domain, showing how classical wisdom can be interpreted, narrated, and visualized through computational means.
 
-### 💡 Pedagogical Value
-This system reimagines traditional moral philosophy through a visual and narrative medium — turning textual commentary into stories that *teach through seeing*.  
-It serves both as a **research prototype** for computational humanities and as a **pedagogical experiment** in bridging Confucian philosophy, language technology, and visual storytelling.
+## Installation
 
----
+```bash
+# Clone the repository
+git clone https://github.com/LeChau01/philosophy-unfolded-great-learning.git
+cd philosophy-unfolded-great-learning
 
-🧩 *AI Comics Factory – The Great Learning (大学 / Đại Học)* thus represents a creative intersection between:
-- **Textual Scholarship** (classical translation & commentary),
-- **Data Science** (graph-based linguistic modeling),
-- **Generative AI** (story + image synthesis),
-- and **Design Research** (knowledge visualization for education).
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate        # macOS/Linux
+venv\Scripts\activate           # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set up .env
+GOOGLE_API_KEY=
+MODEL_TEXT=models/gemini-2.5-pro
+HUGGINGFACE_TOKEN=your_hf_token
+FAST_MODE=false
+
+# Usage
+streamlit run app.py
